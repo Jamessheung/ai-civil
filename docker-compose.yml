@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: ai_civilization_db
+    environment:
+      POSTGRES_USER: ai_civ
+      POSTGRES_PASSWORD: ai_civ_password
+      POSTGRES_DB: ai_civilization
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
