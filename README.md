@@ -1,23 +1,35 @@
-# AI Civilization News Observer (v1.1.1)
+# AI Civilization News Observer (AI-Civil)
 
 A "Civilization-Grade" news observation system based on Event Clusters, Evidence L5-L1, and Strict Governance.
 
-## Prerequisites
+**Repository**: [https://github.com/Jamessheung/ai-civil](https://github.com/Jamessheung/ai-civil)
+
+## Project Overview
+
+AI-Civil is an observational news engine that shifts the focus from "articles" to **Event Clusters**. It implements a strict evidence grading system (L5-L1) and a dual-lens observation mechanism (Observer vs Anthropic) to ensure auditability and reduce hallucination.
+
+### Core Features
+- **Event Cluster First**: Events are the atomic unit; articles are just rendering layers.
+- **Evidence Governance**: L5 (Official/Auditable) to L1 (Inference) grading with strict pointers.
+- **Strict Versioning**: Immutable `published_versions` with replay capabilities.
+- **Dual-Lens**: Switch between *Observer* (Fact/Uncertainty) and *Anthropic* (Governance/Circuit) views.
+
+## Getting Started
+
+### Prerequisites
 
 - Docker & Docker Compose
 - Python 3.9+
 - Node.js 18+
 
-## Quick Start (Sprint 1)
-
-### 1. Start Database
+### 1. Start Infrastructure
+Start the PostgreSQL 15 database:
 ```bash
 docker-compose up -d
 ```
-Verified PostgreSQL 15 will start on port 5432.
 
-### 2. Initialize Schema & Patches
-**CRITICAL**: You must execute the schema and the mandatory patch block.
+### 2. Initialize Database (First Run Only)
+The system requires a strictly governed schema with mandatory triggers.
 ```bash
 # Enter the db container
 docker exec -it ai_civilization_db psql -U ai_civ -d ai_civilization
@@ -26,39 +38,44 @@ docker exec -it ai_civilization_db psql -U ai_civ -d ai_civilization
 # \i /docker-entrypoint-initdb.d/schema.sql
 # \i /docker-entrypoint-initdb.d/patch_v1_1_1.sql
 ```
-(Alternatively, if you restart the container with empty data, it might auto-init using the files in /docker-entrypoint-initdb.d if mapped correctly.)
 
-### 3. Start Backend (FastAPI)
+### 3. Start Backend Services
+The backend handles Data Ingestion, Evidence Extraction, and the 10-minute Heartbeat.
 ```bash
 cd backend
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-# Run Server (Development)
+# Run Development Server
 uvicorn main:app --reload --port 8000
 ```
-Swagger UI: http://localhost:8000/docs
+- **API Documentation**: [http://localhost:8000/docs](http://localhost:8000/docs) (Local)
 
-### 4. Start Frontend (Next.js)
+### 4. Start Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Frontend: http://localhost:3000
+- **Web Interface**: [http://localhost:3000](http://localhost:3000) (Local)
 
 ## Architecture
 
-- **Ingestor**: Fetches RSS -> `raw_items` (Deduped).
-- **Evidence Extractor**: `raw_items` -> `evidence` (L5-L1 Logic).
-- **Clusterer**: Groups evidence into `event_clusters` (Domain: Universe/Earth/Human/Power/Tech/Culture).
-- **Scorer**: Calculates Risk/Consistency.
-- **Heartbeat**: orchestrates the pipeline every 10m.
-- **Governance**: strict strict `last_updated_at` triggers and `log_data` schemas.
+- **Ingestor**: Fetches RSS feeds -> `raw_items` (Content Hash Dedup).
+- **Evidence Extractor**: Processes content -> `evidence` (L5-L1 Rules).
+- **Clusterer**: Groups evidence -> `event_clusters` (Domains: Universe, Earth, Human, Power, Tech, Culture).
+- **Scorer**: Computes Consistency, Risk, and Structure metrics.
+- **Heartbeat**: Orchestrates the pipeline (default: 10m interval).
+- **Governance**: Database triggers ensure `last_updated_at` consistency and immutable logging.
 
 ## Verification
-Run integrity check:
+
+To verify the project structure and dependencies:
 ```bash
 python scripts/verify_integrity.py
 ```
+
+## License
+
+MIT
