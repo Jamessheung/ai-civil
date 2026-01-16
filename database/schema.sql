@@ -37,6 +37,7 @@ CREATE TABLE event_clusters (
   cluster_state VARCHAR(50) NOT NULL DEFAULT 'Emerging'
     CHECK (cluster_state IN ('Emerging','Active','Stabilizing','Disputed','Retracted')),
   title VARCHAR(500),
+  summary TEXT,
   first_observed_at TIMESTAMPTZ DEFAULT NOW(),
   last_updated_at TIMESTAMPTZ DEFAULT NOW(),
   corrected_flag BOOLEAN DEFAULT FALSE,

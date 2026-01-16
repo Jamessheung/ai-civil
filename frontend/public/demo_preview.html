@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Civilization Observer (Preview)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'civ-dark': '#0a0a0a' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #f3f4f6; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen p-8 selection:bg-cyan-900 selection:text-white">
+
+    <header className="max-w-7xl mx-auto mb-12 flex justify-between items-center border-b border-white/10 pb-6">
+        <div class="max-w-7xl mx-auto mb-12 border-b border-white/10 pb-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight mb-2">
+                    AI Civilization <span class="text-cyan-500">Observer</span>
+                </h1>
+                <p class="text-gray-500 text-sm">System v1.1.1 | Governance Method: <code class="text-xs bg-white/5 px-1 rounded">gov_1.0</code></p>
+            </div>
+            <div class="text-right">
+                <div class="text-xs text-gray-500">SYSTEM STATUS</div>
+                <div class="text-green-400 font-mono text-sm">● ONLINE (STATIC PREVIEW)</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-semibold text-gray-300">Active Event Matrix</h2>
+            <span class="px-3 py-1 rounded bg-white/5 border border-white/10 text-xs text-gray-400">Live Data Stream</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-container">
+            <!-- Cards injected by JS -->
+        </div>
+    </section>
+
+    <!-- Detail Modal (Hidden by default) -->
+    <div id="modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 backdrop-blur-sm">
+        <div class="bg-[#0a0a0a] border border-white/10 rounded-xl w-full max-w-4xl h-[80vh] flex flex-col shadow-2xl overflow-hidden">
+            <div class="p-4 border-b border-white/10 flex justify-between items-center bg-[#111]">
+                <span class="font-mono text-cyan-500 text-sm" id="modal-id">CLUSTER_ID</span>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-white">✕ ESC</button>
+            </div>
+            <div class="flex-1 grid grid-cols-12 overflow-hidden">
+                <!-- Left: Evidence -->
+                <div class="col-span-4 border-r border-white/10 bg-[#080808] p-4 overflow-y-auto" id="modal-evidence"></div>
+                <!-- Center: Main -->
+                <div class="col-span-8 p-8 bg-[#050505]">
+                    <span id="modal-badge" class="inline-block px-2 py-0.5 rounded text-xs font-bold mb-4"></span>
+                    <h2 id="modal-title" class="text-2xl font-bold text-white mb-6"></h2>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 rounded bg-white/5 border border-white/10">
+                            <div class="text-xs text-gray-500 mb-1">CONSISTENCY</div>
+                            <div class="text-2xl font-mono text-white" id="modal-score-con"></div>
+                        </div>
+                        <div class="p-4 rounded bg-white/5 border border-white/10">
+                            <div class="text-xs text-gray-500 mb-1">RISK LEVEL</div>
+                            <div class="text-2xl font-mono" id="modal-score-risk"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // MOCK DATA
+        const DATA = [
+            {
+                cluster_id: 101,
+                title: "Federal Reserve Report: Inflation Stabilizing",
+                domain: "Power",
+                state: "Active",
+                updated: "10:42:00 AM",
+                score: { con: "100.0%", risk: "0.0%" },
+                evidence: [
+                    { level: 5, text: "Data indicates inflation has stabilized at 2.1%.", rel: "95%" },
+                    { level: 5, text: "The Federal Reserve released its quarterly financial report today.", rel: "95%" }
+                ]
+            },
+            {
+                cluster_id: 102,
+                title: "Rumor: Tech Giant collapsing?",
+                domain: "Tech",
+                state: "Disputed",
+                updated: "10:45:30 AM",
+                score: { con: "0.0%", risk: "80.0%" },
+                evidence: [
+                    { level: 2, text: "My cousin works at OpenAI and says they are bankrupt.", rel: "20%" },
+                    { level: 1, text: "It might be over guys.", rel: "10%" }
+                ]
+            }
+        ];
+
+        // RENDER GRID
+        const container = document.getElementById('grid-container');
+        DATA.forEach(item => {
+            const domainColors = {
+                'Power': 'bg-yellow-900/50 text-yellow-200 border-yellow-800',
+                'Tech': 'bg-cyan-900/50 text-cyan-200 border-cyan-800'
+            };
+            const stateBadge = item.state === 'Active' 
+                ? '<span class="px-2 py-0.5 rounded text-xs font-bold bg-green-500/20 text-green-400 border border-green-500/30">ACTIVE</span>'
+                : '<span class="px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400 border border-red-500/30">DISPUTED</span>';
+
+            const card = document.createElement('div');
+            card.className = "group relative block bg-[#0a0a0a] border border-white/10 rounded-xl p-6 hover:border-cyan-500/50 transition-all cursor-pointer hover:shadow-[0_0_20px_rgba(6,182,212,0.1)]";
+            card.onclick = () => openModal(item);
+            card.innerHTML = `
+                <div class="absolute top-4 right-4">${stateBadge}</div>
+                <div class="inline-block px-2 py-1 rounded text-xs font-mono mb-4 border ${domainColors[item.domain]}">${item.domain}</div>
+                <h3 class="text-lg font-medium text-gray-100 mb-4 group-hover:text-cyan-400 transition-colors">${item.title}</h3>
+                <div class="flex items-center justify-between text-xs text-gray-600 font-mono mt-8 border-t border-white/5 pt-4">
+                    <span>Last Updated: ${item.updated}</span>
+                    <span class="text-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity">Analyze -></span>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+
+        // MODAL LOGIC
+        function openModal(item) {
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
+            document.getElementById('modal-id').innerText = `CLUSTER_${item.cluster_id}`;
+            document.getElementById('modal-title').innerText = item.title;
+            
+            const badge = document.getElementById('modal-badge');
+            badge.innerText = item.state.toUpperCase();
+            badge.className = `inline-block px-2 py-0.5 rounded text-xs font-bold mb-4 ${item.state === 'Active' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`;
+
+            document.getElementById('modal-score-con').innerText = item.score.con;
+            const riskEl = document.getElementById('modal-score-risk');
+            riskEl.innerText = item.score.risk;
+            riskEl.className = `text-2xl font-mono ${parseFloat(item.score.risk) > 50 ? 'text-red-400' : 'text-green-400'}`;
+
+            const evContainer = document.getElementById('modal-evidence');
+            evContainer.innerHTML = '';
+            item.evidence.forEach(ev => {
+                let style = 'border-l-4 border-gray-500';
+                if(ev.level === 5) style = 'border-l-4 border-green-500 bg-green-900/10';
+                if(ev.level <= 2) style = 'border-l-4 border-red-500 bg-red-900/10 opacity-60';
+
+                evContainer.innerHTML += `
+                    <div class="p-3 rounded-r text-sm mb-3 ${style}">
+                        <div class="flex justify-between items-start mb-2">
+                             <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-white/10 text-white">L${ev.level}</span>
+                        </div>
+                        <p class="leading-relaxed text-gray-300">"${ev.text}"</p>
+                         <div class="mt-2 text-[10px] text-gray-600 font-mono">REL: ${ev.rel}</div>
+                    </div>
+                `;
+            });
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.getElementById('modal').classList.remove('flex');
+        }
+    </script>
+</body>
+</html>

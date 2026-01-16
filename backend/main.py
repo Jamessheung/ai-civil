@@ -1,37 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from contextlib import asynccontextmanager
-from apscheduler.schedulers.background import BackgroundScheduler
-from .database import engine, Base
-from .routes import clusters
-from .services.heartbeat import HeartbeatService
+from backend.routes import clusters
 
-# Initialize Scheduler
-scheduler = BackgroundScheduler()
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    # Startup logic
-    print("System Starting... AI Civilization logic active.")
-    
-    # Start Heartbeat (Every 10 minutes seems long for demo, setting to 60s for verification)
-    # IN PRODUCTION: Use independent worker process.
-    hb = HeartbeatService()
-    scheduler.add_job(hb.run_tick, 'interval', minutes=10, id='heartbeat_tick')
-    scheduler.start()
-    
-    yield
-    
-    # Shutdown logic
-    print("System Shutting down...")
-    scheduler.shutdown()
-
-app = FastAPI(title="AI Civilization News API", version="1.1.1", lifespan=lifespan)
+app = FastAPI(title="AI Civilization News API", version="1.1.1")
 
 # CORS Config
 origins = [
     "http://localhost:3000",
-    "http://127.0.0.1:3000",
+    "http://localhost:3001",
+    "http://127.0.0.1:3001",
 ]
 
 app.add_middleware(
@@ -46,4 +23,4 @@ app.include_router(clusters.router, prefix="/api", tags=["clusters"])
 
 @app.get("/")
 def read_root():
-    return {"status": "active", "system": "AI Civilization News Observer", "version": "v1.1.1"}
+    return {"status": "active", "system": "AI Civilization News Observer (Cloud Mode)", "version": "v1.1.1"}

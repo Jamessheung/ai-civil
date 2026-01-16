@@ -1,91 +1,53 @@
-from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy.orm import Session
+from fastapi import APIRouter, HTTPException
 from typing import List, Optional
-from ..database import get_db
-from ..models import EventCluster, Evidence, Observation, Gap, ClusterScore, PublishedVersion, ClusterActivityLog
+from pydantic import BaseModel
+from datetime import datetime
+from backend.supa_client import get_supabase
 
 router = APIRouter()
 
-@router.get("/clusters")
-def get_clusters(
-    domain: Optional[str] = None,
-    state: Optional[str] = None,
-    limit: int = 20,
-    db: Session = Depends(get_db)
-):
-    query = db.query(EventCluster)
-    if domain:
-        query = query.filter(EventCluster.domain == domain)
-    if state:
-        query = query.filter(EventCluster.cluster_state == state)
+# DTOs
+class ClusterListDTO(BaseModel):
+    cluster_id: int
+    title: str
+    domain: str
+    cluster_state: str
+    last_updated_at: datetime
+
+@router.get("/clusters", response_model=List[ClusterListDTO])
+def get_clusters(domain: Optional[str] = None):
+    supa = get_supabase()
+    query = supa.table("event_clusters").select("cluster_id, title, domain, cluster_state, last_updated_at")
     
-    clusters = query.order_by(EventCluster.last_updated_at.desc()).limit(limit).all()
-    return clusters
+    if domain:
+        query = query.eq("domain", domain)
+        
+    # Order by time DESC
+    res = query.order("last_updated_at", desc=True).execute()
+    return res.data
 
 @router.get("/cluster/{cluster_id}")
-def get_cluster_details(
-    cluster_id: int,
-    v: Optional[str] = None, # Version Sequence (integers as str)
-    lens: Optional[str] = 'observer',
-    db: Session = Depends(get_db)
-):
-    # Support ?v=SEQ logic
-    if v and v.isdigit():
-        # Replay Mode
-        version = db.query(PublishedVersion).filter(
-            PublishedVersion.cluster_id == cluster_id,
-            PublishedVersion.version_seq == int(v)
-        ).first()
-        
-        if not version:
-            raise HTTPException(status_code=404, detail="Version not found")
-        
-        snapshot = version.snapshot_payload
-        # Reconstruct from snapshot
-        # Note: In strict mode we return the snapshot data directly
-        # The frontend expects { event_cluster: ..., evidence: ... }
-        
-        return {
-            "mode": "replay",
-            "version": version,
-            "evidence": snapshot.get('evidence_snapshot', []),
-            "scores": snapshot.get('scores', {}),
-            "lens_payload": snapshot.get('lens_payload', {}),
-            "gaps": snapshot.get('gaps_snapshot', [])
-        }
-
-    # Live Mode
-    cluster = db.query(EventCluster).filter(EventCluster.cluster_id == cluster_id).first()
-    if not cluster:
+def get_cluster_details(cluster_id: int):
+    supa = get_supabase()
+    
+    # 1. Cluster Info
+    c_res = supa.table("event_clusters").select("*").eq("cluster_id", cluster_id).execute()
+    if not c_res.data:
         raise HTTPException(status_code=404, detail="Cluster not found")
-
-    evidence = db.query(Evidence).filter(Evidence.cluster_id == cluster_id).order_by(Evidence.level.desc()).all()
-    observations = db.query(Observation).filter(Observation.cluster_id == cluster_id).all()
-    gaps = db.query(Gap).filter(Gap.cluster_id == cluster_id).all()
+        
+    # 2. Evidence
+    e_res = supa.table("evidence").select("*").eq("cluster_id", cluster_id).order("level", desc=True).execute()
     
-    # Get latest score
-    latest_score = db.query(ClusterScore).filter(ClusterScore.cluster_id == cluster_id).order_by(ClusterScore.computed_at.desc()).first()
+    # 3. Latest Score
+    s_res = supa.table("cluster_scores").select("*").eq("cluster_id", cluster_id).order("computed_at", desc=True).limit(1).execute()
+    latest_score = s_res.data[0] if s_res.data else None
     
-    # Get versions
-    versions = db.query(PublishedVersion).filter(PublishedVersion.cluster_id == cluster_id).order_by(PublishedVersion.version_seq.desc()).all()
-
     return {
-        "mode": "live",
-        "event_cluster": cluster,
-        "evidence": evidence,
-        "observations": observations,
-        "gaps": gaps,
-        "latest_score": latest_score,
-        "versions": versions
+        "event_cluster": c_res.data[0],
+        "evidence": e_res.data,
+        "latest_score": latest_score
     }
 
 @router.get("/state")
-def get_system_state(db: Session = Depends(get_db)):
-    """Global system stats (mockup for MVP)."""
-    total_clusters = db.query(EventCluster).count()
-    total_evidence = db.query(Evidence).count()
-    return {
-        "heartbeat": "active",
-        "cluster_count": total_clusters,
-        "evidence_count": total_evidence
-    }
+def get_system_state():
+    return {"status": "ONLINE", "mode": "SUPABASE_CLOUD"}
