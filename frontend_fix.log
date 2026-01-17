@@ -120,3 +120,326 @@ Import trace for requested module:
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
  ✓ Compiled in 521ms (643 modules)
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:42:1]
+ [2m42[0m |     };
+ [2m43[0m | 
+ [2m44[0m |     return (
+ [2m45[0m |         <div className="min-h-screen bg-[#050505] text-gray-200 font-sans">
+    : [31;1m         ^^^[0m
+ [2m46[0m |             {/* Navbar */}
+ [2m47[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a]">
+ [2m48[0m |                 <a href="/" className="text-gray-500 hover:text-white transition-colors">&larr; Back to Matrix</a>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |         <div className="min-h-screen bg-[#050505] text-gray-200 font-sans">
+    : [31;1m         ^^^[0m
+ [2m54[0m |             {/* Navbar */}
+ [2m55[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a]">
+ [2m56[0m |                 <a href="/" className="text-gray-500 hover:text-white transition-colors">&larr; Back to Matrix</a>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ○ Compiling /not-found ...
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |         <div className="min-h-screen bg-[#050505] text-gray-200 font-sans">
+    : [31;1m         ^^^[0m
+ [2m54[0m |             {/* Navbar */}
+ [2m55[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a]">
+ [2m56[0m |                 <a href="/" className="text-gray-500 hover:text-white transition-colors">&larr; Back to Matrix</a>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |         <div className="min-h-screen bg-[#050505] text-gray-200 font-sans">
+    : [31;1m         ^^^[0m
+ [2m54[0m |             {/* Navbar */}
+ [2m55[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a]">
+ [2m56[0m |                 <a href="/" className="text-gray-500 hover:text-white transition-colors">&larr; Back to Matrix</a>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |         <div className="min-h-screen bg-[#050505] text-gray-200 font-sans">
+    : [31;1m         ^^^[0m
+ [2m54[0m |             {/* Navbar */}
+ [2m55[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a]">
+ [2m56[0m |                 <a href="/" className="text-gray-500 hover:text-white transition-colors">&larr; Back to Matrix</a>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /not-found in 959ms (648 modules)
+ ✓ Compiled (634 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 842ms (643 modules)
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |         <div className="min-h-screen bg-[#050505] text-gray-200 font-sans">
+    : [31;1m         ^^^[0m
+ [2m54[0m |             {/* Navbar */}
+ [2m55[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a]">
+ [2m56[0m |                 <a href="/" className="text-gray-500 hover:text-white transition-colors">&larr; Back to Matrix</a>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ○ Compiling /not-found ...
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |         <div className="min-h-screen bg-[#050505] text-gray-200 font-sans">
+    : [31;1m         ^^^[0m
+ [2m54[0m |             {/* Navbar */}
+ [2m55[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a]">
+ [2m56[0m |                 <a href="/" className="text-gray-500 hover:text-white transition-colors">&larr; Back to Matrix</a>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /not-found in 2.1s (648 modules)
+ ✓ Compiled (634 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 1850ms (648 modules)
+ ✓ Compiled in 555ms (643 modules)
+ ✓ Compiled in 410ms (643 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /not-found in 336ms (634 modules)
+ ✓ Compiled in 796ms (643 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 1053ms (643 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 0ms (274 modules)
+ ✓ Compiled in 0ms (274 modules)
+ ✓ Compiled in 0ms (274 modules)
+ ✓ Compiled in 0ms (274 modules)
+ ✓ Compiled in 1ms (274 modules)
+ ✓ Compiled in 0ms (274 modules)
+ ✓ Compiled in 1ms (274 modules)
+ ✓ Compiled in 1ms (274 modules)
+ ✓ Compiled in 0ms (274 modules)
+ ✓ Compiled in 0ms (274 modules)
+ ✓ Compiled in 1ms (274 modules)
+ ✓ Compiled in 1ms (274 modules)
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Expression expected
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |     return (
+    : [31;1m    ^^^^^^[0m
+ [2m54[0m |         <div className="h-[100dvh] bg-[#050505] text-gray-200 font-sans flex flex-col overflow-hidden">
+ [2m55[0m |             {/* Navbar */}
+ [2m56[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a] shrink-0 z-50">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ○ Compiling /not-found ...
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Expression expected
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |     return (
+    : [31;1m    ^^^^^^[0m
+ [2m54[0m |         <div className="h-[100dvh] bg-[#050505] text-gray-200 font-sans flex flex-col overflow-hidden">
+ [2m55[0m |             {/* Navbar */}
+ [2m56[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a] shrink-0 z-50">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Expression expected
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |     return (
+    : [31;1m    ^^^^^^[0m
+ [2m54[0m |         <div className="h-[100dvh] bg-[#050505] text-gray-200 font-sans flex flex-col overflow-hidden">
+ [2m55[0m |             {/* Navbar */}
+ [2m56[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a] shrink-0 z-50">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./app/cluster/[id]/page.tsx
+Error: 
+  [31mx[0m Expression expected
+    ,-[[36;1;4m/Users/james/Desktop/ai文明/frontend/app/cluster/[id]/page.tsx[0m:50:1]
+ [2m50[0m |     };
+ [2m51[0m | 
+ [2m52[0m |     return (
+ [2m53[0m |     return (
+    : [31;1m    ^^^^^^[0m
+ [2m54[0m |         <div className="h-[100dvh] bg-[#050505] text-gray-200 font-sans flex flex-col overflow-hidden">
+ [2m55[0m |             {/* Navbar */}
+ [2m56[0m |             <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a] shrink-0 z-50">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/cluster/[id]/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /not-found in 2.6s (634 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.

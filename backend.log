@@ -1,170 +1,116 @@
-INFO:     Started server process [24493]
+INFO:     Will watch for changes in these directories: ['/Users/james/Desktop/ai文明']
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     Started reloader process [32622] using StatReload
+INFO:     Started server process [32625]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
-INFO:     127.0.0.1:49413 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49429 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49429 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49459 - "GET /api/cluster/43 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49459 - "GET /api/cluster/43 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49463 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49477 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49477 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49463 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49486 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49490 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49490 - "GET /api/cluster/58 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49486 - "GET /api/cluster/58 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49499 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49503 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49503 - "GET /api/cluster/54 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49503 - "GET /api/cluster/54 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49503 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49508 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49508 - "GET /api/cluster/36 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49508 - "GET /api/cluster/36 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49537 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49549 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49549 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49537 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49537 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49549 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49549 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49560 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49579 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49579 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49583 - "GET /api/cluster/50 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49583 - "GET /api/cluster/50 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49583 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49602 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49734 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49738 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49738 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49738 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49738 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49744 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49744 - "GET /api/cluster/48 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49744 - "GET /api/cluster/48 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49744 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49744 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49761 - "GET /api/cluster/54 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49761 - "GET /api/cluster/54 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49761 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49764 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49764 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49764 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50178 - "GET /api/cluster/80 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50204 - "GET /api/cluster/80 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50204 - "GET /api/cluster/80 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50286 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50292 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50292 - "GET /api/cluster/58 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50286 - "GET /api/cluster/58 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50286 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50305 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50286 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50286 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50286 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50310 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50310 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50286 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50286 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50310 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50310 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50286 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50342 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50342 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50352 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50352 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50364 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50367 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50367 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50364 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50364 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50384 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50384 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50388 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50384 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50396 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50399 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50399 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50411 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50411 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50399 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50399 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50419 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50435 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50447 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50453 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50473 - "GET /api/cluster/48 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50473 - "GET /api/cluster/48 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50484 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50484 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50523 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50529 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50534 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50538 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50523 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50534 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50523 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50534 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50550 - "GET /api/cluster/58 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50550 - "GET /api/cluster/58 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50550 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50553 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50553 - "GET /api/cluster/54 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50567 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50576 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50553 - "GET /api/cluster/54 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50596 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50596 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50769 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50769 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50769 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50769 - "GET /api/cluster/33 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50870 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50870 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50878 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50878 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50870 - "GET /api/cluster/47 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50899 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50903 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50909 - "GET /api/cluster/58 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50909 - "GET /api/cluster/58 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50922 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50909 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50951 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50960 - "GET /api/cluster/57 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50960 - "GET /api/cluster/57 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50971 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50976 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50976 - "GET /api/cluster/48 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50971 - "GET /api/cluster/48 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50990 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50995 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50995 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50995 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51101 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51101 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51101 - "GET /api/cluster/76 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51105 - "GET /api/cluster/76 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51195 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51210 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51219 - "GET /api/cluster/85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51219 - "GET /api/cluster/85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51214 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51231 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51231 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51231 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51246 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51262 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51262 - "GET /api/cluster/41 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51310 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51310 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51319 - "GET /api/cluster/63 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51319 - "GET /api/cluster/63 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51340 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51351 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51355 - "GET /api/clusters HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51360 - "GET /api/cluster/85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51360 - "GET /api/cluster/85 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64113 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64117 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64161 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64161 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64247 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64257 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64260 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64257 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64260 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64257 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64273 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64257 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64273 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64279 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64291 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64291 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64304 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64307 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64314 - "GET /api/cluster/42 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64314 - "GET /api/cluster/42 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64329 - "GET /api/cluster/42 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64333 - "GET /api/cluster/42 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /api/cluster/91 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64564 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64581 - "GET /api/cluster/42 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64585 - "GET /api/cluster/85 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /api/cluster/91 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64589 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64569 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64564 - "GET /api/cluster/42 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64581 - "GET /api/cluster/85 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64589 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64585 - "GET /api/cluster/91 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64581 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64589 - "GET /api/cluster/91 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64581 - "GET /api/cluster/91 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64589 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /api/cluster/91 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64605 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64605 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64618 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64618 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64561 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64686 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64690 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64702 - "GET /api/cluster/74 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64702 - "GET /api/cluster/74 HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'scripts/enrich_data.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [32625]
+INFO:     Started server process [33012]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:64774 - "GET /api/cluster/74 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64774 - "GET /api/cluster/74 HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'scripts/enrich_data.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33012]
+INFO:     Started server process [33103]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:64935 - "GET /api/cluster/74 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64935 - "GET /api/cluster/74 HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'scripts/enrich_data.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33103]
+INFO:     Started server process [33416]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'scripts/enrich_data.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33416]
+INFO:     Started server process [33433]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:53942 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53980 - "GET /api/cluster/41 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63095 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63103 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63118 - "GET /api/cluster/33 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63118 - "GET /api/cluster/33 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64020 - "GET /api/cluster/42 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64030 - "GET /api/cluster/42 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64101 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64111 - "GET /api/clusters HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64119 - "GET /api/cluster/31 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64125 - "GET /api/cluster/31 HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'scripts/enrich_data.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33433]
+INFO:     Started server process [36105]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:59030 - "GET /api/cluster/85 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59048 - "GET /api/cluster/85 HTTP/1.1" 200 OK

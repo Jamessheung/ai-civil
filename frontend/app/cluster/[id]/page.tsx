@@ -11,10 +11,18 @@ interface Evidence {
     pointer: any;
 }
 
+interface Claim {
+    claim_id: number;
+    content: string;
+    claim_status: string;
+    confidence_score: number;
+}
+
 interface DetailData {
     event_cluster: any;
     evidence: Evidence[];
     latest_score: any;
+    claims?: Claim[];
 }
 
 export default function ClusterDetail() {
@@ -42,18 +50,18 @@ export default function ClusterDetail() {
     };
 
     return (
-        <div className="min-h-screen bg-[#050505] text-gray-200 font-sans">
+        <div className="h-[100dvh] bg-[#050505] text-gray-200 font-sans flex flex-col overflow-hidden">
             {/* Navbar */}
-            <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a]">
+            <nav className="border-b border-white/10 px-6 py-4 flex items-center gap-4 bg-[#0a0a0a] shrink-0 z-50">
                 <a href="/" className="text-gray-500 hover:text-white transition-colors">&larr; Back to Matrix</a>
                 <div className="h-4 w-px bg-white/10"></div>
                 <span className="font-mono text-sm text-cyan-500">CLUSTER_{cluster.cluster_id}</span>
             </nav>
 
-            <main className="h-[calc(100vh-65px)] grid grid-cols-12 overflow-hidden">
+            <main className="flex-1 grid grid-cols-12 overflow-hidden min-h-0">
 
                 {/* LEFT: EVIDENCE PANEL */}
-                <div className="col-span-4 border-r border-white/10 flex flex-col bg-[#080808]">
+                <div className="col-span-4 border-r border-white/10 flex flex-col bg-[#080808] h-full overflow-hidden">
                     <div className="p-4 border-b border-white/10 bg-[#0a0a0a]">
                         <h2 className="text-lg font-bold text-gray-400 uppercase tracking-wider">Evidence Log</h2>
                         <div className="text-base text-gray-600 mt-1">{evidence.length} Records Verified</div>
@@ -75,12 +83,16 @@ export default function ClusterDetail() {
                                 </div>
                             </div>
                         ))}
+                        <div className="h-64 w-full shrink-0 flex flex-col items-center justify-center opacity-30">
+                            <div className="w-1 h-8 bg-gray-700 mb-2"></div>
+                            <span className="text-xs font-mono uppercase tracking-widest text-gray-600">End of Verified Log</span>
+                        </div>
                     </div>
                 </div>
 
                 {/* CENTER: ANALYSIS / LENS */}
-                <div className="col-span-5 border-r border-white/10 flex flex-col bg-[#050505]">
-                    <div className="p-8">
+                <div className="col-span-5 border-r border-white/10 flex flex-col bg-[#050505] h-full overflow-hidden">
+                    <div className="flex-1 overflow-y-auto p-8">
                         <div className="inline-block px-3 py-1 rounded bg-white/10 text-white text-base font-bold mb-5">
                             {cluster.cluster_state.toUpperCase()}
                         </div>
@@ -102,19 +114,42 @@ export default function ClusterDetail() {
                             </div>
                         )}
 
+                        {/* Claims Layer (v2.0) */}
+                        {data.claims && data.claims.length > 0 && (
+                            <div className="mb-10 animate-fade-in-up">
+                                <h3 className="text-xl font-bold text-gray-300 mb-4 flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded bg-purple-500"></span>
+                                    CORE ASSERTION (Claim Layer)
+                                </h3>
+                                {data.claims.map(claim => (
+                                    <div key={claim.claim_id} className="p-6 rounded border border-purple-500/20 bg-purple-900/10">
+                                        <p className="text-2xl text-purple-100 font-light italic leading-relaxed mb-4">
+                                            "{claim.content.replace('ASSERTION: ', '')}"
+                                        </p>
+                                        <div className="flex justify-between items-center text-sm font-mono text-purple-400/60">
+                                            <span>STATUS: {claim.claim_status.toUpperCase()}</span>
+                                            <span>CONFIDENCE: {(claim.confidence_score * 100).toFixed(0)}%</span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+
+
                         <div className="bg-blue-900/10 border border-blue-900/30 p-6 rounded text-lg text-blue-200 leading-relaxed">
                             <strong className="block mb-3 text-blue-400 text-xl">Observer Lens Active</strong>
                             {cluster.summary || "Analysis indicates high variance in reporting sources. Secondary structure suggests evolving narrative."}
                         </div>
+                        <div className="h-32 w-full shrink-0"></div>
                     </div>
                 </div>
 
                 {/* RIGHT: TIMELINE / VERSIONS */}
-                <div className="col-span-3 bg-[#080808] flex flex-col">
+                <div className="col-span-3 bg-[#080808] flex flex-col h-full overflow-hidden">
                     <div className="p-4 border-b border-white/10 bg-[#0a0a0a]">
                         <h2 className="text-lg font-bold text-gray-400 uppercase tracking-wider">System Ticks</h2>
                     </div>
-                    <div className="p-4">
+                    <div className="flex-1 overflow-y-auto p-4">
                         <div className="border-l border-white/10 pl-4 space-y-8">
                             <div className="relative">
                                 <div className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full bg-cyan-500 shadow-[0_0_10px_cyan]"></div>
