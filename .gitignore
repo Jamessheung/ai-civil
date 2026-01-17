@@ -18,3 +18,4 @@ postgres_data/
 # IDE
 .idea/
 .vscode/
+frontend_fix.log
