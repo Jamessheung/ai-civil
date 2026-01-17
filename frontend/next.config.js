@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
+  // 里面什么都不用填，或者保持默认
 };
 
 module.exports = nextConfig;
