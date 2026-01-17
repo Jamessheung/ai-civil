@@ -29,9 +29,12 @@ export default function ClusterDetail() {
     const params = useParams();
     const [data, setData] = useState<DetailData | null>(null);
 
+    // Use Env Var for API URL
+    const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001';
+
     useEffect(() => {
         if (!params.id) return;
-        fetch(`http://localhost:8001/api/cluster/${params.id}`)
+        fetch(`${API_BASE}/api/cluster/${params.id}`)
             .then(res => res.json())
             .then(setData)
             .catch(console.error);

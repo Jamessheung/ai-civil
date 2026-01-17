@@ -443,3 +443,6 @@ Import trace for requested module:
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 3.2s (645 modules)
+ ✓ Compiled in 283ms (645 modules)
+ ✓ Compiled in 2.2s (645 modules)

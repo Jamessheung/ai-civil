@@ -114,3 +114,11 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     127.0.0.1:59030 - "GET /api/cluster/85 HTTP/1.1" 200 OK
 INFO:     127.0.0.1:59048 - "GET /api/cluster/85 HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'backend/supa_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [36105]
+INFO:     Started server process [37866]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

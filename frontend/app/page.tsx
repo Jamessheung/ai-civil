@@ -9,6 +9,33 @@ interface Cluster {
     domain: string;
     cluster_state: string;
     last_updated_at: string;
+    // New fields for v2.0 Civilization System
+    scores: {
+        consistency: number;
+        contradiction_ratio: number;
+        risk: number;
+    };
+    evidence_counts: {
+        total: number;
+        L5: number;
+        L4: number;
+        L3: number;
+    };
+    deltas: {
+        evidence_weighted: number;
+        uncertainty: number;
+        claims: number;
+    };
+    times: {
+        tick: string;
+        published: string;
+        seq: number;
+    };
+    lens_type: string;
+    anthropic_scores?: {
+        aix: number;
+        aud: number;
+    };
 }
 
 // Helper for client-side clock
@@ -28,8 +55,11 @@ export default function Home() {
     const [clusters, setClusters] = useState<Cluster[]>([]);
     const [loading, setLoading] = useState(true);
 
+    // Use Env Var for API URL (Deployment Support)
+    const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001';
+
     useEffect(() => {
-        fetch('http://localhost:8001/api/clusters')
+        fetch(`${API_BASE}/api/clusters`)
             .then(res => res.json())
             .then(data => {
                 setClusters(data);
